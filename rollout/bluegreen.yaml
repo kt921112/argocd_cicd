@@ -82,7 +82,7 @@ spec:
     apiVersion: argoproj.io/v1alpha1
     kind: Rollout
     name: rollout-bluegreen
-  minReplicas: 1
+  minReplicas: 2
   maxReplicas: 10
   metrics:
   - type: Resource
@@ -91,3 +91,10 @@ spec:
       target:
         type: Utilization
         averageUtilization: 50
+  behavior:
+    scaleDown:
+      stabilizationWindowSeconds: 60
+      policies:
+      - type: Pods
+        value: 1
+        periodSeconds: 15
