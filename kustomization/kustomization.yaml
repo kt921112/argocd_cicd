@@ -5,5 +5,4 @@ helmCharts:
   - name: bluegreen
     version: "0.1.0"
     repo: https://github.com/kt921112/argocd_cicd.git
-    releaseName: bluegreen-release
     namespace: bluegreentest
