@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
       - name: rollouts-demo
-        image: parkkyungtae/kub-first-app:2
+        image: parkkyungtae/kub-first-app:1
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
